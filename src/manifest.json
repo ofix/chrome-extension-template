@@ -1,0 +1,69 @@
+{
+    "manifest_version": 3,
+    "name": "Redfish",
+    "version": "1.0.0",
+    "description": "抓取Redfish API接口返回的数据",
+    "homepage_url": "https://github.com/ofix",
+    "author": "songhuabiao@greatwall.com.cn",
+    "action": {
+        "default_icon": {
+            "24": "img/16_16.png",
+            "48": "img/48_48.png",
+            "64": "img/64_64.png",
+            "128": "img/128_128.png"
+        },
+        "default_title": "BMC Redfish APIs",
+        "default_popup": "css/popup.html",
+        "default_css": "css/popup.css"
+    },
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "js/chunk-vendors.js"
+            ],
+            "matches": [
+                "https://172.26.14.10/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "scripting",
+        "bookmarks",
+        "browsingData",
+        "cookies",
+        "nativeMessaging",
+        "contextMenus",
+        "tabs",
+        "notifications",
+        "webRequest",
+        "storage",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "alarms",
+        "desktopCapture"
+    ],
+    "commands": {
+        "download_redfish_pages": {
+            "suggested_key": {
+                "default": "Ctrl+Q",
+                "windows": "Ctrl+Q",
+                "mac": "Command+Q",
+                "chromeos": "Ctrl+Q",
+                "linux": "Ctrl+Q"
+            },
+            "description": "保存 BMC Redfish API 接口数据抓取"
+        }
+    },
+    "host_permissions": [
+        "https://*/redfish/v1/*"
+    ],
+    "omnibox": {
+        "keyword": "api"
+    },
+    "default_locale": "zh_CN",
+    "devtools_page": "devtools.html",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
