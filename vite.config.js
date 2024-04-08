@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 import copy from "rollup-plugin-copy";
 import path from "path";
+import basicSsl from '@vitejs/plugin-basic-ssl';
 
 export default defineConfig({
   root: "src/", // 不增加此项设置 html文件将无法正常拷贝
@@ -16,6 +17,11 @@ export default defineConfig({
       ],
       verbose: true,
     }),
+    basicSsl({
+      name: 'dev_server_cert',
+      domains: ['127.0.0.1'],
+      certDir: './dist/ssl-cert'
+    })
   ],
   resolve: {
     alias: {
@@ -50,9 +56,8 @@ export default defineConfig({
             path.extname(chunkInfo.facadeModuleId)
           );
           const saveArr = ["content", "service_worker"];
-          const entry_name = `[name]/${
-            saveArr.includes(baseName) ? baseName : chunkInfo.name
-          }.js`;
+          const entry_name = `[name]/${saveArr.includes(baseName) ? baseName : chunkInfo.name
+            }.js`;
           return entry_name;
         },
         assetFileNames: "[name]/[name].[ext]", // 静态资源
