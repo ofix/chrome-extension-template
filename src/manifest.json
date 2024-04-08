@@ -46,7 +46,8 @@
         "declarativeNetRequest",
         "declarativeNetRequestFeedback",
         "alarms",
-        "desktopCapture"
+        "desktopCapture",
+        "management"
     ],
     "web_accessible_resources": [
         {
@@ -71,6 +72,14 @@
                 "linux": "Ctrl+Q"
             },
             "description": "保存 BMC Redfish API 接口数据抓取"
+        },
+        "reload_extension": {
+            "suggested_key": {
+                "default": "Alt+R",
+                "windows": "Alt+R",
+                "mac": "Alt+R"
+            },
+            "description": "reload browser extension"
         }
     },
     "host_permissions": [
@@ -79,6 +88,5 @@
     "omnibox": {
         "keyword": "api"
     },
-    "default_locale": "zh_CN",
-    "devtools_page": "devtools.html"
+    "default_locale": "zh_CN"
 }
