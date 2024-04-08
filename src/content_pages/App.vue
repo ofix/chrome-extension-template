@@ -1,17 +1,17 @@
 <template>
-    <div class="popup-header">popup window</div>
-  </template>
+    <el-button>这是一个测试按钮</el-button>
+</template>
    
-  <script>
-  export default {
+<script>
+export default {
+
+}
+</script>
    
-  }
-  </script>
-   
-  <style lang="less" scoped>
-  .popup-header {
+<style lang="less" scoped>
+.popup-header {
     width: 100px;
     height: 100px;
     color: red;
-  }
-  </style>
+}
+</style>

@@ -29,6 +29,7 @@ export default defineConfig({
     hmr: true, //开启热更新
   },
   build: {
+    chunkSizeWarningLimit: 2000,
     outDir: path.resolve(__dirname, "dist"),
     assetsDir: "assets",
     sourcemap: false,
