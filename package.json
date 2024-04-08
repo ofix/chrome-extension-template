@@ -6,7 +6,7 @@
     "scripts": {
         "watch": "vite build --watch",
         "dev": "vite",
-        "build": "vite build -c vite.config.js && node build.js",
+        "build": "vite build -c vite.config.js",
         "preview": "vite preview"
     },
     "dependencies": {
@@ -16,8 +16,8 @@
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.0.4",
-        "copy-webpack-plugin": "^6.0.2",
         "less": "^4.2.0",
+        "rollup-plugin-copy": "^3.5.0",
         "sass": "^1.74.1",
         "vite": "^5.2.0"
     }

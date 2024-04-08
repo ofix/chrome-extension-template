@@ -13,11 +13,11 @@
             "128": "img/128_128.png"
         },
         "default_title": "BMC Redfish APIs",
-        "default_popup": "css/popup.html",
-        "default_css": "css/popup.css"
+        "default_popup": "popup/popup.html",
+        "default_css": "popup/popup.css"
     },
     "background": {
-        "service_worker": "js/background.js"
+        "service_worker": "background/background.js"
     },
     "content_scripts": [
         {
