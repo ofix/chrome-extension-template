@@ -43,10 +43,16 @@ for (let k in vite_paths) {
 
 // 删除src目录
 let vite_src_dir = path.resolve(process.cwd(), "dist/src");
-fs.rmdirSync(vite_src_dir, { recursive: true });
+fs.rmSync(vite_src_dir, { recursive: true });
 
 // 拷贝文件到dist目录
-let copy_dirs = ["_locales", "assets", "background_scripts", "content_scripts", "manifest.json"];
+let copy_dirs = [
+  "_locales",
+  "assets",
+  "background_scripts",
+  "content_scripts",
+  "manifest.json",
+];
 for (let i = 0; i < copy_dirs.length; i++) {
   let src = path.resolve(process.cwd(), "src/" + copy_dirs[i]);
   let dest = path.resolve(process.cwd(), "dist/" + copy_dirs[i]);
