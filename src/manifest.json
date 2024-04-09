@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Redfish",
     "version": "1.0.0",
-    "description": "抓取Redfish API接口返回的数据",
+    "description": "chrome extension v3",
     "homepage_url": "https://github.com/ofix",
     "author": "songhuabiao@greatwall.com.cn",
     "action": {
@@ -12,7 +12,7 @@
             "64": "assets/64_64.png",
             "128": "assets/128_128.png"
         },
-        "default_title": "BMC Redfish APIs",
+        "default_title": "chrome extension toolbar button",
         "default_popup": "popup/index.html",
         "default_css": "popup/popup.css"
     },
@@ -25,7 +25,7 @@
                 "content/content.js"
             ],
             "matches": [
-                "https://172.26.13.42/*"
+                "https://*/*"
             ],
             "all_frames": true,
             "run_at": "document_end",
@@ -57,7 +57,7 @@
                 "_locales/*"
             ],
             "matches": [
-                "https://172.26.13.42/*"
+                "https://*/*"
             ],
             "use_dynamic_url": true
         }
@@ -71,7 +71,7 @@
                 "chromeos": "Ctrl+Q",
                 "linux": "Ctrl+Q"
             },
-            "description": "保存 BMC Redfish API 接口数据抓取"
+            "description": "save BMC Redfish API data"
         },
         "reload_extension": {
             "suggested_key": {
